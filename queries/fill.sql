@@ -126,13 +126,13 @@ INSERT INTO HAS_GENRE_FILM (genre_id, film_id) VALUES
                                                    (1, 5), (5, 5),
                                                    (2, 6), (6, 6),
                                                    (4, 7), (2, 7),
-                                                   (2, 8),          -- Godfather: Drama
+                                                   (2, 8),     
                                                    (2, 9), (5, 9),
-                                                   (2, 10),         -- Goodfellas: Drama
+                                                   (2, 10), 
                                                    (5, 11), (7, 11),
                                                    (8, 12), (10, 12),
                                                    (2, 13), (5, 13),
-                                                   (2, 14),         -- Whiplash: Drama
+                                                   (2, 14), 
                                                    (2, 15), (6, 15);
 
 INSERT INTO HAS_GENRE_SERIES (genre_id, series_id) VALUES
