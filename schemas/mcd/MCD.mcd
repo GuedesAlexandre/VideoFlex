@@ -1,0 +1,30 @@
+CLIENT:courriel,nom,prenom,adresse,dateFinAbo,typeAbo
+
+POSSEDE, 1N CLIENT, 11 PROFIL
+
+NOTE_FILM, 0N PROFIL, 0N FILM: note
+PROFIL:numéroProfil,nom
+NOTE_EPISODE, 0N PROFIL, 0N EPISODE: note
+
+VISIONNE, 0N PROFIL, 0N FILM : timestamp
+CREER_LABEL, 0N PROFIL, 0N LABEL
+REGARDE, 0N PROFIL, 0N EPISODE : timestamp
+EPISODE:numéroEpisode,titre,réalisateur,durée,saison
+
+LABEL_FILM, 0N FILM, 0N LABEL
+LABEL: numeroLabel,titre
+LABEL_EPISODE,0N EPISODE, 0N LABEL
+
+
+FILM:numéroFilm,titre,annéeProduction,durée
+A_POUR_GENRE_FILM, 0N GENRE, 1N FILM
+GENRE:numéroGenre,nom
+A_POUR_GENRE_SERIE, 0N GENRE, 1N SERIE
+SERIE:numéroSérie,titre
+APPARTIENT, 11 EPISODE, 1N SERIE
+
+JOUE_DANS_FILM, 1N ROLE, 0N FILM, 0N PERSONNE
+PERSONNE:numéroPersonne,nom,prénom
+JOUE_DANS_SERIE, 1N ROLE, 0N SERIE, 0N PERSONNE
+
+ROLE:numéroRole,nom,prenom,image
