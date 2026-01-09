@@ -1,23 +1,23 @@
 CLIENT:courriel,nom,prenom,adresse,dateFinAbo,typeAbo
 
 POSSEDE, 1N CLIENT, 11 PROFIL
+
+AJOUTE, 0N PROFIL, 0N LABEL, 0N VIDEO
 PROFIL:numéroProfil,nom
-NOTE_VIDEO, 0N PROFIL, 0N VIDEO : note
-CREER_LABEL, 0N PROFIL, 0N LABEL
+NOTE, 0N PROFIL, 0N VIDEO: note
+
 REGARDE, 0N PROFIL, 0N VIDEO : timestamp
-VIDEO:numéroVideo, titre,durée, annéeProduction
 
-LABEL_VIDEO, 0N VIDEO, 0N LABEL
 LABEL: numeroLabel,titre
+VIDEO:numéroVideo, titre,durée, annéeProduction
+REALISE, 1N VIDEO, 1N PERSONNE
+PERSONNE:numéroPersonne,nom,prénom
 
-A_POUR_GENRE_VIDEO, 0N GENRE, 1N VIDEO
+QUALIFIE, 0N GENRE, 1N VIDEO
+APPARTIENT, 01 VIDEO, 1N SERIE : saison, numero_episode
+JOUE, 1N ROLE, 0N VIDEO, 0N PERSONNE
+
+
 GENRE:numéroGenre,nom
 SERIE:numéroSérie,titre
-APPARTIENT, 11 VIDEO, 1N SERIE : saison, numero_episode
-
-
-JOUE_DANS_VIDEO, 1N ROLE, 0N VIDEO, 0N PERSONNE
-PERSONNE:numéroPersonne,nom,prénom
-REALISE_VIDEO, 1N VIDEO, 1N PERSONNE
-
 ROLE:numéroRole,nom,prenom,image
