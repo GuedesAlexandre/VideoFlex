@@ -40,7 +40,7 @@ CREATE TABLE FILM (
                       film_id SERIAL PRIMARY KEY,
                       title VARCHAR(255) NOT NULL,
                       production_year INTEGER,
-                      duration INTEGER -- duration in minutes
+                      duration INTEGER
 );
 
 
@@ -53,7 +53,7 @@ CREATE TABLE EPISODE (
                          episode_id SERIAL PRIMARY KEY,
                          title VARCHAR(255) NOT NULL,
                          director VARCHAR(100),
-                         duration INTEGER, -- duration in minutes
+                         duration INTEGER,
                          season INTEGER,
                          series_id INTEGER NOT NULL,
                          FOREIGN KEY (series_id) REFERENCES SERIES(series_id) ON DELETE CASCADE

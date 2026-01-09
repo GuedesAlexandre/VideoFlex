@@ -195,9 +195,9 @@ INSERT INTO LABEL_FILM (label_id, film_id) VALUES
                                                (10, 6), (10, 15);
 
 INSERT INTO LABEL_EPISODE (label_id, episode_id) VALUES
-                                                     (1, 1), (1, 6),  -- Favorites
-                                                     (2, 9), (2, 12), -- Watch Later
-                                                     (5, 1), (5, 2);  -- Rewatch
+                                                     (1, 1), (1, 6),
+                                                     (2, 9), (2, 12),
+                                                     (5, 1), (5, 2);
 
 INSERT INTO RATE_FILM (profile_id, film_id, rating) VALUES
                                                         (1, 1, 9.5), (1, 2, 9.0), (1, 3, 10.0), (1, 5, 9.2),
