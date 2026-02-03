@@ -6,13 +6,11 @@
 
 - FK: courriel REFERENCES CLIENT(courriel)
 
-**FILM** (<u>numéroFilm</u>, titre, annéeProduction, durée)
-
-**SERIE** (<u>numéroSérie</u>, titre)
-
-**EPISODE** (<u>numéroEpisode</u>, titre, réalisateur, durée, saison, #numéroSérie)
+**VIDEO** (<u>numéroVideo</u>, titre, durée, annéeProduction, saison, numero_episode, #numéroSérie)
 
 - FK : numéroSérie REFERENCES SERIE(numéroSérie)
+
+**SERIE** (<u>numéroSérie</u>, titre)
 
 **LABEL** (<u>numéroLabel</u>, titre)
 
@@ -26,59 +24,34 @@
 
 ## Tables d'association
 
-**NOTE_FILM** (<u>#numéroProfil, #numéroFilm</u>, note)
+**NOTE** (<u>#numéroProfil, #numéroVideo</u>, note)
 
 - FK: numéroProfil REFERENCES PROFIL(numéroProfil)
-- FK : numéroFilm REFERENCES FILM(numéroFilm)
+- FK: numéroVideo REFERENCES VIDEO(numéroVideo)
 
-**NOTE_EPISODE** (<u>#numéroProfil, #numéroEpisode</u>, note)
-
-- FK: numéroProfil REFERENCES PROFIL(numéroProfil)
-- FK: numéroEpisode REFERENCES EPISODE(numéroEpisode)
-
-**VISIONNE** (<u>#numéroProfil, #numéroFilm</u>, timestamp)
+**REGARDE** (<u>#numéroProfil, #numéroVideo</u>, timestamp)
 
 - FK: numéroProfil REFERENCES PROFIL(numéroProfil)
-- FK : numéroFilm REFERENCES FILM(numéroFilm)
+- FK: numéroVideo REFERENCES VIDEO(numéroVideo)
 
-**REGARDE** (<u>#numéroProfil, #numéroEpisode</u>, timestamp)
+**AJOUTE** (<u>#numéroProfil, #numéroLabel, #numéroVideo</u>)
 
-- FK : numéroProfil REFERENCES PROFIL(numéroProfil)
-- FK : numéroEpisode REFERENCES EPISODE(numéroEpisode)
+- FK: numéroProfil REFERENCES PROFIL(numéroProfil)
+- FK: numéroLabel REFERENCES LABEL(numéroLabel)
+- FK: numéroVideo REFERENCES VIDEO(numéroVideo)
 
-**CREER_LABEL** (<u>#numéroProfil, #numéroLabel</u>)
+**QUALIFIE** (<u>#numéroGenre, #numéroVideo</u>)
 
-- FK : numéroProfil REFERENCES PROFIL(numéroProfil)
-- FK : numéroLabel REFERENCES LABEL(numéroLabel)
+- FK: numéroGenre REFERENCES GENRE(numéroGenre)
+- FK: numéroVideo REFERENCES VIDEO(numéroVideo)
 
-**LABEL_FILM** (<u>#numéroLabel, #numéroFilm</u>)
+**REALISE** (<u>#numéroVideo, #numéroPersonne</u>)
 
-- FK : numéroLabel REFERENCES LABEL(numéroLabel)
-- FK : numéroFilm REFERENCES FILM(numéroFilm)
+- FK: numéroVideo REFERENCES VIDEO(numéroVideo)
+- FK: numéroPersonne REFERENCES PERSONNE(numéroPersonne)
 
-**LABEL_EPISODE** (<u>#numéroLabel, #numéroEpisode</u>)
+**JOUE** (<u>#numéroRole, #numéroVideo, #numéroPersonne</u>)
 
-- FK : numéroLabel REFERENCES LABEL(numéroLabel)
-- FK : numéroEpisode REFERENCES EPISODE(numéroEpisode)
-
-**A_POUR_GENRE_FILM** (<u>#numéroGenre, #numéroFilm</u>)
-
-- FK : numéroGenre REFERENCES GENRE(numéroGenre)
-- FK : numéroFilm REFERENCES FILM(numéroFilm)
-
-**A_POUR_GENRE_SERIE** (<u>#numéroGenre, #numéroSérie</u>)
-
-- FK : numéroGenre REFERENCES GENRE(numéroGenre)
-- FK : numéroSérie REFERENCES SERIE(numéroSérie)
-
-**JOUE_DANS_FILM** (<u>#numéroPersonne, #numéroFilm, #numéroRole</u>)
-
-- FK : numéroPersonne REFERENCES PERSONNE(numéroPersonne)
-- FK : numéroFilm REFERENCES FILM(numéroFilm)
-- FK : numéroRole REFERENCES ROLE(numéroRole)
-
-**JOUE_DANS_SERIE** (<u>#numéroPersonne, #numéroSérie, #numéroRole</u>)
-
-- FK : numéroPersonne REFERENCES PERSONNE(numéroPersonne)
-- FK : numéroSérie REFERENCES SERIE(numéroSérie)
-- FK : numéroRole REFERENCES ROLE(numéroRole)
+- FK: numéroRole REFERENCES ROLE(numéroRole)
+- FK: numéroVideo REFERENCES VIDEO(numéroVideo)
+- FK: numéroPersonne REFERENCES PERSONNE(numéroPersonne)
