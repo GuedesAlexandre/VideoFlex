@@ -10,7 +10,7 @@ REGARDE, 0N PROFIL, 0N VIDEO : timestamp
 
 LABEL: numeroLabel,titre
 VIDEO:numéroVideo, titre,durée, annéeProduction
-REALISE, 1N VIDEO, 1N PERSONNE
+REALISE, 1N VIDEO, 0N PERSONNE
 PERSONNE:numéroPersonne,nom,prénom
 
 QUALIFIE, 0N GENRE, 1N VIDEO
