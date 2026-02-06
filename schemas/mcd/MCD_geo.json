@@ -1,6 +1,6 @@
 {
   "width": 500,
-  "height": 744,
+  "height": 776,
   "cx": [
     [ "CLIENT", 189 ],
     [ "POSSEDE", 189 ],
@@ -22,20 +22,20 @@
   "cy": [
     [ "CLIENT", 77 ],
     [ "POSSEDE", 195 ],
-    [ "AJOUTE", 279 ],
-    [ "PROFIL", 279 ],
-    [ "NOTE", 279 ],
-    [ "REGARDE", 363 ],
-    [ "LABEL", 464 ],
-    [ "VIDEO", 464 ],
-    [ "REALISE", 464 ],
-    [ "PERSONNE", 464 ],
-    [ "QUALIFIE", 574 ],
-    [ "APPARTIENT", 574 ],
-    [ "JOUE", 574 ],
-    [ "GENRE", 684 ],
-    [ "SERIE", 684 ],
-    [ "ROLE", 684 ]
+    [ "AJOUTE", 287 ],
+    [ "PROFIL", 287 ],
+    [ "NOTE", 287 ],
+    [ "REGARDE", 379 ],
+    [ "LABEL", 488 ],
+    [ "VIDEO", 488 ],
+    [ "REALISE", 488 ],
+    [ "PERSONNE", 488 ],
+    [ "QUALIFIE", 606 ],
+    [ "APPARTIENT", 606 ],
+    [ "JOUE", 606 ],
+    [ "GENRE", 716 ],
+    [ "SERIE", 716 ],
+    [ "ROLE", 716 ]
   ],
   "shift": [
     [ "POSSEDE,CLIENT,0", 0 ],

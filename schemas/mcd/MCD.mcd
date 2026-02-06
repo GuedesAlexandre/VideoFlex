@@ -3,13 +3,13 @@ CLIENT:courriel,nom,prenom,adresse,dateFinAbo,typeAbo
 POSSEDE, 1N CLIENT, 11 PROFIL
 
 AJOUTE, 0N PROFIL, 0N LABEL, 0N VIDEO
-PROFIL:numéroProfil,nom
+PROFIL:numéroProfil,nom, icon
 NOTE, 0N PROFIL, 0N VIDEO: note
 
 REGARDE, 0N PROFIL, 0N VIDEO : timestamp
 
 LABEL: numeroLabel,titre
-VIDEO:numéroVideo, titre,durée, annéeProduction
+VIDEO:numéroVideo, titre,durée, annéeProduction, main_image
 REALISE, 1N VIDEO, 0N PERSONNE
 PERSONNE:numéroPersonne,nom,prénom
 

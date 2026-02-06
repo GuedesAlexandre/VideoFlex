@@ -5,15 +5,15 @@ INSERT INTO CLIENT (email, last_name, first_name, address, subscription_end_date
 ('sophie.bernard@free.fr', 'Bernard', 'Sophie', '23 Allée Jean Jaurès, 31000 Toulouse', '2025-09-20', 'Basic'),
 ('antoine.petit@gmail.com', 'Petit', 'Antoine', '67 Promenade des Anglais, 06000 Nice', '2026-01-10', 'Premium');
 
-INSERT INTO PROFILE (name, client_email) VALUES
-('Cthulhu', 'jean.dupont@wanadoo.fr'),
-('Azathoth', 'jean.dupont@wanadoo.fr'),
-('Pennywise', 'marie.leclerc@orange.fr'),
-('Nyarlathotep', 'pierre.moreau@sfr.fr'),
-('Randall_Flagg', 'pierre.moreau@sfr.fr'),
-('Shub-Niggurath', 'sophie.bernard@free.fr'),
-('Cujo', 'antoine.petit@gmail.com'),
-('Yog-Sothoth', 'antoine.petit@gmail.com');
+INSERT INTO PROFILE (icon, name, client_email) VALUES
+('https://cdn.videoflex.com/icons/profiles/cthulhu.png', 'Cthulhu', 'jean.dupont@wanadoo.fr'),
+('https://cdn.videoflex.com/icons/profiles/azathoth.png', 'Azathoth', 'jean.dupont@wanadoo.fr'),
+('https://cdn.videoflex.com/icons/profiles/pennywise.png', 'Pennywise', 'marie.leclerc@orange.fr'),
+('https://cdn.videoflex.com/icons/profiles/nyarlathotep.png', 'Nyarlathotep', 'pierre.moreau@sfr.fr'),
+('https://cdn.videoflex.com/icons/profiles/randall_flagg.png', 'Randall_Flagg', 'pierre.moreau@sfr.fr'),
+('https://cdn.videoflex.com/icons/profiles/shub_niggurath.png', 'Shub-Niggurath', 'sophie.bernard@free.fr'),
+('https://cdn.videoflex.com/icons/profiles/cujo.png', 'Cujo', 'antoine.petit@gmail.com'),
+('https://cdn.videoflex.com/icons/profiles/yog_sothoth.png', 'Yog-Sothoth', 'antoine.petit@gmail.com');
 
 INSERT INTO GENRE (name) VALUES
 ('Action'), ('Drama'), ('Comedy'), ('Sci-Fi'), ('Thriller'),
@@ -23,39 +23,39 @@ INSERT INTO SERIES (title) VALUES
 ('Breaking Bad'), ('Stranger Things'), ('The Office'), ('Game of Thrones'), ('Black Mirror'),
 ('The Crown'), ('Money Heist'), ('Dark'), ('The Witcher'), ('Squid Game');
 
-INSERT INTO VIDEO (title, production_year, duration, series_id, season, episode_number) VALUES
-('The Matrix', 1999, 136, NULL, NULL, NULL),
-('Inception', 2010, 148, NULL, NULL, NULL),
-('The Shawshank Redemption', 1994, 142, NULL, NULL, NULL),
-('Pulp Fiction', 1994, 154, NULL, NULL, NULL),
-('The Dark Knight', 2008, 152, NULL, NULL, NULL),
-('Forrest Gump', 1994, 142, NULL, NULL, NULL),
-('Interstellar', 2014, 169, NULL, NULL, NULL),
-('The Godfather', 1972, 175, NULL, NULL, NULL),
-('Fight Club', 1999, 139, NULL, NULL, NULL),
-('Goodfellas', 1990, 146, NULL, NULL, NULL),
-('The Silence of the Lambs', 1991, 118, NULL, NULL, NULL),
-('Spirited Away', 2001, 125, NULL, NULL, NULL),
-('Parasite', 2019, 132, NULL, NULL, NULL),
-('Whiplash', 2014, 106, NULL, NULL, NULL),
-('La La Land', 2016, 128, NULL, NULL, NULL);
+INSERT INTO VIDEO (main_image, title, duration, production_year, series_id, season, episode_number) VALUES
+('https://cdn.videoflex.com/images/movies/the_matrix.jpg', 'The Matrix', 136, 1999, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/inception.jpg', 'Inception', 148, 2010, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/the_shawshank_redemption.jpg', 'The Shawshank Redemption', 142, 1994, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/pulp_fiction.jpg', 'Pulp Fiction', 154, 1994, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/the_dark_knight.jpg', 'The Dark Knight', 152, 2008, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/forrest_gump.jpg', 'Forrest Gump', 142, 1994, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/interstellar.jpg', 'Interstellar', 169, 2014, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/the_godfather.jpg', 'The Godfather', 175, 1972, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/fight_club.jpg', 'Fight Club', 139, 1999, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/goodfellas.jpg', 'Goodfellas', 146, 1990, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/the_silence_of_the_lambs.jpg', 'The Silence of the Lambs', 118, 1991, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/spirited_away.jpg', 'Spirited Away', 125, 2001, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/parasite.jpg', 'Parasite', 132, 2019, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/whiplash.jpg', 'Whiplash', 106, 2014, NULL, NULL, NULL),
+('https://cdn.videoflex.com/images/movies/la_la_land.jpg', 'La La Land', 128, 2016, NULL, NULL, NULL);
 
-INSERT INTO VIDEO (title, production_year, duration, series_id, season, episode_number) VALUES
-('Pilot', 2008, 58, 1, 1, 1),
-('Cat''s in the Bag...', 2008, 48, 1, 1, 2),
-('...And the Bag''s in the River', 2008, 48, 1, 1, 3),
-('Cancer Man', 2008, 48, 1, 1, 4),
-('Gray Matter', 2008, 48, 1, 1, 5),
-('The Vanishing of Will Byers', 2016, 47, 2, 1, 1),
-('The Weirdo on Maple Street', 2016, 55, 2, 1, 2),
-('Holly, Jolly', 2016, 51, 2, 1, 3),
-('The Body', 2016, 50, 2, 1, 4),
-('Pilot', 2005, 23, 3, 1, 1),
-('Diversity Day', 2005, 22, 3, 1, 2),
-('Health Care', 2005, 22, 3, 1, 3),
-('Winter Is Coming', 2011, 62, 4, 1, 1),
-('The Kingsroad', 2011, 56, 4, 1, 2),
-('Lord Snow', 2011, 58, 4, 1, 3);
+INSERT INTO VIDEO (main_image, title, duration, production_year, series_id, season, episode_number) VALUES
+('https://cdn.videoflex.com/images/series/breaking_bad/s01e01.jpg', 'Pilot', 58, 2008, 1, 1, 1),
+('https://cdn.videoflex.com/images/series/breaking_bad/s01e02.jpg', 'Cat''s in the Bag...', 48, 2008, 1, 1, 2),
+('https://cdn.videoflex.com/images/series/breaking_bad/s01e03.jpg', '...And the Bag''s in the River', 48, 2008, 1, 1, 3),
+('https://cdn.videoflex.com/images/series/breaking_bad/s01e04.jpg', 'Cancer Man', 48, 2008, 1, 1, 4),
+('https://cdn.videoflex.com/images/series/breaking_bad/s01e05.jpg', 'Gray Matter', 48, 2008, 1, 1, 5),
+('https://cdn.videoflex.com/images/series/stranger_things/s01e01.jpg', 'The Vanishing of Will Byers', 47, 2016, 2, 1, 1),
+('https://cdn.videoflex.com/images/series/stranger_things/s01e02.jpg', 'The Weirdo on Maple Street', 55, 2016, 2, 1, 2),
+('https://cdn.videoflex.com/images/series/stranger_things/s01e03.jpg', 'Holly, Jolly', 51, 2016, 2, 1, 3),
+('https://cdn.videoflex.com/images/series/stranger_things/s01e04.jpg', 'The Body', 50, 2016, 2, 1, 4),
+('https://cdn.videoflex.com/images/series/the_office/s01e01.jpg', 'Pilot', 23, 2005, 3, 1, 1),
+('https://cdn.videoflex.com/images/series/the_office/s01e02.jpg', 'Diversity Day', 22, 2005, 3, 1, 2),
+('https://cdn.videoflex.com/images/series/the_office/s01e03.jpg', 'Health Care', 22, 2005, 3, 1, 3),
+('https://cdn.videoflex.com/images/series/game_of_thrones/s01e01.jpg', 'Winter Is Coming', 62, 2011, 4, 1, 1),
+('https://cdn.videoflex.com/images/series/game_of_thrones/s01e02.jpg', 'The Kingsroad', 56, 2011, 4, 1, 2),
+('https://cdn.videoflex.com/images/series/game_of_thrones/s01e03.jpg', 'Lord Snow', 58, 2011, 4, 1, 3);
 
 INSERT INTO PERSON (last_name, first_name) VALUES
 ('Reeves', 'Keanu'), ('DiCaprio', 'Leonardo'), ('Freeman', 'Morgan'), ('Bale', 'Christian'),

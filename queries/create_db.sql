@@ -24,6 +24,7 @@ CREATE TABLE CLIENT (
 
 CREATE TABLE PROFILE (
     profile_id SERIAL PRIMARY KEY,
+    icon VARCHAR(255),
     name VARCHAR(100) NOT NULL,
     client_email VARCHAR(255) NOT NULL,
     FOREIGN KEY (client_email) REFERENCES CLIENT(email) ON DELETE CASCADE ON UPDATE CASCADE
@@ -46,6 +47,7 @@ CREATE TABLE LABEL (
 
 CREATE TABLE VIDEO (
     video_id SERIAL PRIMARY KEY,
+    main_image VARCHAR(255),
     title VARCHAR(255) NOT NULL,
     duration INTEGER,
     production_year INTEGER,

@@ -2,11 +2,11 @@
 
 **CLIENT** (<u>courriel</u>, nom, prenom, adresse, dateFinAbo, typeAbo)
 
-**PROFIL** (<u>numéroProfil</u>, nom, #courriel)
+**PROFIL** (<u>numéroProfil</u>, nom, icon,  #courriel)
 
 - FK: courriel REFERENCES CLIENT(courriel)
 
-**VIDEO** (<u>numéroVideo</u>, titre, durée, annéeProduction, saison, numero_episode, #numéroSérie)
+**VIDEO** (<u>numéroVideo</u>, titre, main_image, durée, annéeProduction, saison, numero_episode, #numéroSérie)
 
 - FK : numéroSérie REFERENCES SERIE(numéroSérie)
 
